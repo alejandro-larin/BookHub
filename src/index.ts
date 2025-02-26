@@ -5,7 +5,8 @@ const  PORT = 3000
 
 app.get('/ping',(_req,res)=>{
 
-    res.send(`someone pinged here!! ${new Date().toLocaleDateString()}`)
+    console.log("Ping here!!")
+    res.send("ping")
 })
 
 app.listen(PORT,()=>{
