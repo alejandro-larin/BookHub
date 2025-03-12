@@ -1,12 +1,11 @@
 import { Router } from 'express'
-import { getAcceptBooks } from '../controllers/books.controllers'
+import { postReqBooks, getResBooks } from '../controllers/books.controllers'
+
 export const router = Router()
 
-router.post('/books', getAcceptBooks)
+router.post('/books', postReqBooks)
 
-router.get('/books', (_req, res) => {
-  res.send('Book list')
-})
+router.get('/books', getResBooks)
 
 router.get('/books/:id', (_req, res) => {
   res.send('Book detail')
